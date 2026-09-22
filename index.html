@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="孙瑞祥 · 软件工程 2025 届本科毕业生，主修软件测试与 Java 开发，拥有 AI 视觉与工业机械臂项目经验。" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>孙瑞祥 · 软件工程 · 个人主页</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ========== 全局动效层 ========== -->
+  <div class="aurora-layer" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="particles" id="particles" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ========== 星空背景 ========== -->
+  <div class="cosmic-field" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <!-- ========== 启动门 ========== -->
+  <section class="intro-gate" aria-labelledby="intro-title">
+    <canvas id="cosmos-canvas" aria-hidden="true"></canvas>
+    <div class="intro-bg-grid" aria-hidden="true"></div>
+    <div class="intro-brand"><span>瑞</span> SOFTWARE ENGINEER · 2025</div>
+    <p class="intro-eyebrow">SUN RUIXIANG · PORTFOLIO v2.0</p>
+    <h1 id="intro-title">把每一行代码<br /><span>做成可被信任的产品</span></h1>
+
+    <button class="character-button" type="button" aria-label="点击进入个人主页">
+      <span class="character-halo"></span>
+      <span class="intro-photo-sticker" aria-hidden="true">
+        <img src="assets/photos/SRX.jpg" alt="" decoding="async" fetchpriority="high" />
+        <span class="sticker-label">孙瑞祥 · DEVELOPER</span>
+      </span>
+    </button>
+    <p class="intro-hint"><span>点击进入</span> 个人主页 <i>↗</i><small>接收第一束代码信号</small></p>
+    <button class="intro-skip" type="button">跳过启动 →</button>
+    <div class="intro-deco deco-one">✦</div>
+    <div class="intro-deco deco-two">⌘</div>
+    <div class="intro-deco deco-three">⌁</div>
+    <div class="formula formula-one" aria-hidden="true">JAVA</div>
+    <div class="formula formula-two" aria-hidden="true">2025</div>
+    <div class="formula formula-three" aria-hidden="true">OPENCV</div>
+  </section>
+
+  <!-- ========== 迷你导航 ========== -->
+  <aside class="mini-guide" aria-label="快速导航">
+    <button class="mini-character" type="button" aria-expanded="false" aria-controls="mini-menu">
+      <img src="assets/photos/SRX.jpg" alt="孙瑞祥" loading="lazy" decoding="async" /><i>+</i>
+    </button>
+    <nav id="mini-menu" class="mini-menu">
+      <p>快速跳转</p>
+      <a href="#top">🏠 首页</a>
+      <a href="#identity">👋 关于我</a>
+      <a href="#achievements">🏆 我的成就</a>
+      <a href="#contact">📬 联系方式</a>
+      <a href="about.html" data-page="about">📄 简历详情</a>
+      <a href="projects.html" data-page="projects">🧪 项目经验</a>
+      <a href="experience.html" data-page="experience">💼 实习经历</a>
+    </nav>
+  </aside>
+
+  <!-- ========== 页内信号收集 ========== -->
+  <aside class="signal-dock" aria-label="SRX 信号收集进度">
+    <div class="signal-dock-head">
+      <span></span>
+      <div><b>SIGNALS</b><small>认识孙瑞祥的几束光</small></div>
+      <strong id="signal-count">0/3</strong>
+    </div>
+    <div class="signal-nodes">
+      <i data-signal-node="hello" title="问候">01</i>
+      <i data-signal-node="contact" title="联系">02</i>
+      <i data-signal-node="explore" title="探索">03</i>
+    </div>
+    <a href="#contact">前往联系方式 <span>↘</span></a>
+  </aside>
+
+  <div class="unlock-toast" role="status" aria-live="polite">
+    <span>✦</span>
+    <div><b>接收到一束新信号</b><p>继续探索孙瑞祥的个人主页。</p></div>
+  </div>
+  <div class="warp-flash" aria-hidden="true"></div>
+
+  <!-- ========== 页面背景光晕 ========== -->
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+
+  <!-- ========== 顶部导航 ========== -->
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回首页">
+      <span>瑞</span>
+      <b>孙瑞祥 · 个人主页</b>
+      <small>SOFTWARE ENGINEER · 2025</small>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+      <i></i><i></i><span class="sr-only">打开导航</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="主导航">
+      <a href="#top">首页</a>
+      <a href="#identity">关于我</a>
+      <a href="#achievements">我的成就</a>
+      <a href="#contact">联系方式</a>
+      <span class="nav-divider" aria-hidden="true">·</span>
+      <a href="about.html" data-page="about">简历详情</a>
+      <a href="projects.html" data-page="projects">项目经验</a>
+      <a href="experience.html" data-page="experience">实习经历</a>
+      <button class="theme-button" type="button" aria-label="切换深色模式">
+        <span class="sun">☀</span><span class="moon">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ========== 主内容区 ========== -->
+  <main id="top">
+
+    <!-- ============= 1. Hero 区 ============= -->
+    <section class="hero shell" id="hero">
+      <div class="hero-copy reveal">
+        <div class="status"><span></span> STATUS · OPEN TO OPPORTUNITIES</div>
+        <p class="hello">你好，我是</p>
+        <h1>孙瑞祥<span class="spark">✦</span></h1>
+        <p class="hero-mission">做靠谱的<br /><span>软件测试与开发。</span></p>
+        <p class="hero-intro">上海杉达学院软件工程 2025 届本科，主修软件测试、软件管理及 Java 语言。多次参与校级和市级计算机比赛，拥有实用新型专利与软件著作权。</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#contact">查看联系方式 <span>↘</span></a>
+          <a class="under-link" href="#achievements">看我的成就 →</a>
+        </div>
+      </div>
+
+      <div class="identity-card reveal" data-delay="1" id="identity">
+        <div class="id-top">
+          <span>DEV ID · SUN-RUIXIANG</span>
+          <span>AVAILABLE</span>
+        </div>
+        <div class="avatar">
+          <img src="assets/photos/SRX.jpg" alt="孙瑞祥 个人头像" loading="lazy" decoding="async" />
+        </div>
+        <div class="id-name"><strong>孙瑞祥</strong><span>软件工程师 · 应届</span></div>
+        <div class="id-meta">
+          <span>23岁 · 男</span>
+          <span>上海 · 175cm</span>
+          <span>2025 届</span>
+          <span>CET-6</span>
+        </div>
+        <div class="tape tape-one"></div>
+        <div class="tape tape-two"></div>
+      </div>
+
+      <a class="first-signal reveal" href="#contact" data-signal="hello">
+        <span class="signal-pulse"></span>
+        <div>
+          <small>FIRST SIGNAL / HELLO</small>
+          <strong>你好，我是孙瑞祥。</strong>
+          <p>杉达学院软件工程 2025 届，做过 AI 视觉与工业机械臂，也做过上位机软件。如果你在找靠谱的应届开发者或测试工程师，欢迎联系我。</p>
+        </div>
+        <i>接收 ↘</i>
+      </a>
+
+      <div class="hero-orbit" aria-hidden="true">
+        <span></span>
+        <i>TEST · BUILD · SHIP ·</i>
+      </div>
+    </section>
+
+    <!-- ============= 2. 数据快览 ============= -->
+    <section class="quick-stats shell reveal" aria-label="快速数据">
+      <article><strong data-count="4" data-suffix="+">0<small>+</small></strong><span>参与项目</span></article>
+      <article><strong data-count="3">0</strong><span>年软件测试实习</span></article>
+      <article><strong data-count="1">0</strong><span>实用新型专利</span></article>
+      <article><strong data-count="1">0</strong><span>软件著作权</span></article>
+    </section>
+
+    <!-- ============= 3. 关于我（简介） ============= -->
+    <section class="about shell section-pad">
+      <div class="section-kicker reveal"><span>01</span> ABOUT</div>
+      <div class="about-grid">
+        <div class="about-title reveal">
+          <h2>踏实做事，<br /><span>把代码跑稳。</span></h2>
+          <div class="doodle">测试 · 开发 · 协作 ↗</div>
+        </div>
+        <div class="about-copy reveal" data-delay="1">
+          <p class="lead">我是孙瑞祥，软件工程 2025 届本科毕业生，长期参与软件测试与开发，能精准定位软件问题。</p>
+          <p>在校期间主修软件测试、软件管理及 Java，多次参与校级和市级计算机比赛与活动。能根据所学内容参与项目研发与调试改进，参与过 AI 视觉 + 工业机械臂、上位机软件、3D 建模等多个方向。</p>
+          <p>具备团队组建与扩充经验，了解项目管理与协调流程。工作踏实肯干，喜欢迎接新挑战。</p>
+        </div>
+      </div>
+      <div class="role-cloud reveal">
+        <span class="hot">软件测试</span>
+        <span>Java 开发</span>
+        <span>OpenCV</span>
+        <span>Django</span>
+        <span class="hot">3D 建模</span>
+        <span>SW / UG</span>
+        <span>3D 打印</span>
+        <span>英语 CET-6</span>
+      </div>
+    </section>
+
+    <!-- ============= 4. 我的成就 ============= -->
+    <section class="achievements shell section-pad" id="achievements">
+      <div class="achievements-head reveal">
+        <div class="section-kicker"><span>02</span> ACHIEVEMENTS</div>
+        <p class="future-eyebrow">PATENTS · SOFTWARE COPYRIGHT · AWARDS</p>
+        <h2>一路走来的<br /><span>几枚勋章</span> ✦</h2>
+        <p class="achievements-lead">从双创立项到市级比赛，下面这些是大学期间拿到的关键成果与奖项。点击进入对应页面查看完整细节。</p>
+      </div>
+
+      <div class="achievements-grid">
+        <!-- 1. 实用新型专利 -->
+        <article class="achievement-card reveal" data-tier="1" data-aos-delay="0">
+          <div class="achievement-medal">🏅</div>
+          <span class="achievement-tier">TIER · GOLD</span>
+          <h3>实用新型专利</h3>
+          <span class="achievement-org">2023 双创市级立项</span>
+          <p>基于机械臂 + 视觉抓取方案的实用新型专利，已完成申报与受理。</p>
+          <div class="achievement-meta">
+            <span>类型 <b>实用新型</b></span>
+            <span>年份 <b>2023</b></span>
+          </div>
+        </article>
+
+        <!-- 2. 软件著作权 -->
+        <article class="achievement-card reveal" data-delay="1" data-tier="2">
+          <div class="achievement-medal">📜</div>
+          <span class="achievement-tier">TIER · NATIONAL</span>
+          <h3>软件著作权</h3>
+          <span class="achievement-org">2024 双创国家级立项</span>
+          <p>基于 OpenCV / Django 架构的视觉识别系统，已完成软件著作权登记。</p>
+          <div class="achievement-meta">
+            <span>级别 <b>国家级</b></span>
+            <span>年份 <b>2024</b></span>
+          </div>
+        </article>
+
+        <!-- 3. 上海市计算机应用能力大赛 -->
+        <article class="achievement-card reveal" data-delay="2" data-tier="1">
+          <div class="achievement-medal">🥉</div>
+          <span class="achievement-tier">TIER · GOLD</span>
+          <h3>上海市计算机应用能力大赛</h3>
+          <span class="achievement-org">上海市级 · 三等奖</span>
+          <p>参与计算机应用能力方向市级赛，获得上海市三等奖。</p>
+          <div class="achievement-meta">
+            <span>奖项 <b>三等奖</b></span>
+            <span>范围 <b>市级</b></span>
+          </div>
+        </article>
+
+        <!-- 4. 浦东新势力大赛 -->
+        <article class="achievement-card reveal" data-delay="3" data-tier="3">
+          <div class="achievement-medal">🥈</div>
+          <span class="achievement-tier">TIER · INNOVATION</span>
+          <h3>浦东新势力大赛</h3>
+          <span class="achievement-org">浦东新区 · 二等奖</span>
+          <p>参与浦东新势力创新赛，凭借作品与答辩获得浦东新区二等奖。</p>
+          <div class="achievement-meta">
+            <span>奖项 <b>二等奖</b></span>
+            <span>范围 <b>区级</b></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============= 5. 联系方式（核心） ============= -->
+    <section id="contact" class="contact section-pad">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker"><span>03</span> CONTACT</div>
+            <h2>如何<span>找到我</span></h2>
+          </div>
+          <p>目前所有可用的联系方式。请选择您最方便的那一种。</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- 邮箱（主） -->
+          <a class="contact-card contact-main reveal" href="mailto:987467610@qq.com" data-signal="contact">
+            <div class="contact-icon">✉</div>
+            <div class="contact-body">
+              <small>EMAIL · 邮件（推荐）</small>
+              <h3>987467610@qq.com</h3>
+              <p>最正式的联系方式。咨询合作、面试邀约或项目细节，请优先发邮件给我，标题请简要说明来意。</p>
+            </div>
+            <i class="contact-arrow">↗</i>
+          </a>
+
+          <!-- 电话 -->
+          <a class="contact-card reveal" data-delay="1" href="tel:+8618116139644">
+            <div class="contact-icon">☏</div>
+            <div class="contact-body">
+              <small>PHONE · 电话</small>
+              <h3>+86 181-1613-9644</h3>
+              <p>如需电话沟通，建议先通过邮件或短信预约时间，工作日 9:00 - 21:00 可联系。</p>
+            </div>
+            <i class="contact-arrow">↗</i>
+          </a>
+
+          <!-- GitHub -->
+          <a class="contact-card reveal" data-delay="2" href="https://github.com/srx20030317-arch" target="_blank" rel="noopener">
+            <div class="contact-icon">{ }</div>
+            <div class="contact-body">
+              <small>GITHUB · 代码</small>
+              <h3>github.com/srx20030317-arch</h3>
+              <p>代码与开源项目，本主页的源代码也托管在这里。欢迎 star / fork / 提 issue。</p>
+            </div>
+            <i class="contact-arrow">↗</i>
+          </a>
+
+          <!-- 简历 PDF -->
+          <a class="contact-card reveal" data-delay="1" href="assets/Sun-Ruixiang-Resume.pdf" target="_blank" rel="noopener">
+            <div class="contact-icon">📄</div>
+            <div class="contact-body">
+              <small>RESUME · 简历 PDF</small>
+              <h3>孙瑞祥的简历.pdf</h3>
+              <p>完整版简历 PDF，可直接下载或打印。如需最新版本，请通过邮件索取。</p>
+            </div>
+            <i class="contact-arrow">↗</i>
+          </a>
+
+          <!-- 个人仓库 -->
+          <a class="contact-card reveal" data-delay="2" href="https://github.com/srx20030317-arch/resume" target="_blank" rel="noopener">
+            <div class="contact-icon">★</div>
+            <div class="contact-body">
+              <small>REPOSITORY · 本主页仓库</small>
+              <h3>resume 仓库</h3>
+              <p>本个人主页的源代码所在 GitHub 仓库。</p>
+            </div>
+            <i class="contact-arrow">↗</i>
+          </a>
+
+          <!-- 所在地 -->
+          <div class="contact-card contact-placeholder reveal">
+            <div class="contact-icon">◫</div>
+            <div class="contact-body">
+              <small>LOCATION · 所在地</small>
+              <h3>Shanghai · 中国</h3>
+              <p>目前常驻上海，欢迎同城的伙伴线下交流。</p>
+            </div>
+            <i class="contact-arrow">＋</i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= 6. 履历快览 ============= -->
+    <section class="future shell section-pad" id="future-sections">
+      <div class="future-stars" aria-hidden="true"></div>
+      <div class="future-head reveal">
+        <div class="section-kicker"><span>04</span> RESUME PREVIEW</div>
+        <p class="future-eyebrow">EDUCATION · PROJECTS · EXPERIENCE</p>
+        <h2>从杉达到工程现场，<br /><span>正在积累中。</span></h2>
+        <p class="future-lead">下面是我的教育、项目与实习经历的快览。详细内容请进入对应页面查看。</p>
+      </div>
+
+      <div class="upcoming-grid reveal">
+        <a class="upcoming-card" href="about.html">
+          <span class="upcoming-no">A</span>
+          <div class="upcoming-icon">🎓</div>
+          <h3>教育背景</h3>
+          <p>上海杉达学院 · 软件工程（本科） · 2021-2025。主修软件测试、软件管理及 Java 语言。</p>
+          <i class="upcoming-arrow">↗</i>
+        </a>
+
+        <a class="upcoming-card" href="projects.html">
+          <span class="upcoming-no">B</span>
+          <div class="upcoming-icon">🧪</div>
+          <h3>项目经验</h3>
+          <p>AI 视觉 + 工业机械臂、上海市计算机应用能力大赛三等奖、浦东新势力大赛二等奖、3D 建模与打印等。</p>
+          <i class="upcoming-arrow">↗</i>
+        </a>
+
+        <a class="upcoming-card" href="experience.html">
+          <span class="upcoming-no">C</span>
+          <div class="upcoming-icon">💼</div>
+          <h3>实习经历</h3>
+          <p>上海博特盈信息科技有限公司 · 软件测试员 · 2021.05 - 2024.07，长期参与软件测试。</p>
+          <i class="upcoming-arrow">↗</i>
+        </a>
+
+        <a class="upcoming-card" href="about.html">
+          <span class="upcoming-no">D</span>
+          <div class="upcoming-icon">🏆</div>
+          <h3>知识产权</h3>
+          <p>2023 年双创市级立项获实用新型专利；2024 年双创国家级立项，基于 OpenCV / Django 架构软著。</p>
+          <i class="upcoming-arrow">↗</i>
+        </a>
+
+        <a class="upcoming-card" href="about.html">
+          <span class="upcoming-no">E</span>
+          <div class="upcoming-icon">🌐</div>
+          <h3>语言与技能</h3>
+          <p>大学英语六级（CET-6），能熟练读写交流；熟悉 Windows 办公自动化软件与多种开发工具。</p>
+          <i class="upcoming-arrow">↗</i>
+        </a>
+
+        <a class="upcoming-card" href="about.html">
+          <span class="upcoming-no">F</span>
+          <div class="upcoming-icon">💭</div>
+          <h3>自我评价</h3>
+          <p>工作积极认真、勤奋好学、动手能力强、坚毅不拔。喜欢迎接新挑战，有较强的社会责任感。</p>
+          <i class="upcoming-arrow">↗</i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============= 7. 结尾 / 收束 ============= -->
+    <section class="closing shell section-pad reveal">
+      <div class="hx-final">
+        <div class="hx-final-copy">
+          <small>END OF FIRST CHAPTER · 2025</small>
+          <p>感谢你的浏览。</p>
+          <h2>这是<br /><em>孙瑞祥的起点。</em></h2>
+          <strong id="final-signal-message">继续探索，收集剩余信号。</strong>
+          <a href="#top">回到顶部 ↑</a>
+        </div>
+        <div class="hx-constellation" aria-label="SRX 的几束信号">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <polyline points="20,55 50,20 80,55 50,85 20,55" />
+          </svg>
+          <i style="--x:20%;--y:55%" data-final-signal="hello"><b>01</b><span>问候</span></i>
+          <i style="--x:50%;--y:20%" data-final-signal="contact"><b>02</b><span>联系</span></i>
+          <i style="--x:80%;--y:55%" data-final-signal="explore"><b>03</b><span>探索</span></i>
+          <i style="--x:50%;--y:85%" data-final-signal="future"><b>+</b><span>未来</span></i>
+          <div>
+            <small>SUN-RX</small>
+            <strong id="final-signal-count">0 / 3</strong>
+            <span>SIGNALS ONLINE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="site-footer shell">
+    <div>
+      <strong>孙瑞祥 · 个人主页</strong>
+      <span>SOFTWARE ENGINEER · BUILT 2025 · V2.0</span>
+    </div>
+    <p>© <span id="year"></span> BUILT WITH CODE &amp; CARE.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+# Git 忽略文件
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Claude 本地配置与 skill
+.claude/
+
+# 系统文件
+desktop.ini
+$RECYCLE.BIN/
+
+# 日志
+*.log
+npm-debug.log*
+
+# 临时文件
+*.tmp
+*.bak
+*.orig
+
+# Node（如果以后添加）
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# 不要忽略网站文件本身！
+!index.html
+!about.html
+!projects.html
+!experience.html
+!styles.css
+!script.js
+!assets/
+
+# 草稿/参考资料（不入库）
+index.md
+styles.md
+script.md
+assets-audio.md
+assets-photos.md
+assets-projects.md
+data-files.md

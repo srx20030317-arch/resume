@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- 渐变背景 -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9e59ee"/>
+      <stop offset="100%" stop-color="#ff91c5"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffe8f8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="400" height="400" fill="url(#bg)"/>
+
+  <!-- 装饰小圆点 -->
+  <circle cx="60" cy="80" r="3" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="340" cy="120" r="2" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="80" cy="320" r="2.5" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="320" cy="280" r="3" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="200" cy="50" r="2" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="50" cy="200" r="2.5" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="350" cy="200" r="2" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="200" cy="350" r="2.5" fill="rgba(255,255,255,0.4)"/>
+
+  <!-- ✦ 装饰 -->
+  <text x="100" y="110" font-family="serif" font-size="20" fill="rgba(255,255,255,0.5)">✦</text>
+  <text x="280" y="290" font-family="serif" font-size="22" fill="rgba(255,255,255,0.5)">✿</text>
+
+  <!-- 中心圆环 -->
+  <circle cx="200" cy="200" r="120" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <circle cx="200" cy="200" r="135" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+  <!-- 文字 SRX -->
+  <text x="200" y="220" text-anchor="middle" font-family="sans-serif" font-size="84" font-weight="800" fill="url(#text)" filter="url(#glow)" letter-spacing="-2">SRX</text>
+
+  <!-- 副标题 -->
+  <text x="200" y="260" text-anchor="middle" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.85)" letter-spacing="4">OBSERVER 001</text>
+
+  <!-- 底部装饰线 -->
+  <line x1="160" y1="285" x2="240" y2="285" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+</svg>

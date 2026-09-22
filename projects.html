@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="孙瑞祥 · 项目经验 — AI 视觉 + 工业机械臂、上位机软件、3D 建模等。" />
+  <title>孙瑞祥 · 项目经验</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ========== 全局动效层 ========== -->
+  <div class="aurora-layer" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="particles" id="particles" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="返回首页">
+      <span>瑞</span>
+      <b>孙瑞祥 · 个人主页</b>
+      <small>SOFTWARE ENGINEER · 2025</small>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+      <i></i><i></i><span class="sr-only">打开导航</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="主导航">
+      <a href="index.html#top">首页</a>
+      <a href="index.html#identity">关于我</a>
+      <a href="index.html#achievements">我的成就</a>
+      <a href="index.html#contact">联系方式</a>
+      <span class="nav-divider" aria-hidden="true">·</span>
+      <a href="about.html" data-page="about">简历详情</a>
+      <a href="projects.html" data-page="projects" aria-current="page">项目经验</a>
+      <a href="experience.html" data-page="experience">实习经历</a>
+      <button class="theme-button" type="button" aria-label="切换深色模式">
+        <span class="sun">☀</span><span class="moon">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell" style="min-height: auto; padding-top: 140px; padding-bottom: 60px;">
+      <div class="hero-copy reveal">
+        <div class="status"><span></span> PAGE · PROJECTS</div>
+        <p class="hello">项目经验</p>
+        <h1 style="font-size: clamp(48px, 9vw, 96px);">做过的<span style="font-size:0.7em;">事</span></h1>
+        <p class="hero-mission">从比赛到创业年会，<br /><span>从视觉到机械臂。</span></p>
+        <p class="hero-intro">以下项目按时间倒序排列，均为在校或实习期间完成的实际工作。每个项目附简要描述、关联荣誉与技术栈。</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="index.html">← 返回首页</a>
+          <a class="under-link" href="experience.html">继续看实习经历 →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-pad">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker"><span>01</span> PROJECTS</div>
+            <h2>项目<span>一览</span></h2>
+          </div>
+          <p>2024 年至今的项目经历。</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- 1. 全国大学生创业年会 -->
+          <div class="contact-card contact-main reveal">
+            <div class="contact-icon">🏆</div>
+            <div class="contact-body">
+              <small>2025.09 ~ 2025.10 · 国家级入选</small>
+              <h3>全国大学生创业年会</h3>
+              <p>项目入选参加全国大学生创业年会。从校内立项一路走到全国展示，覆盖从研发、申报到答辩的完整链路。</p>
+            </div>
+            <i class="contact-arrow">＋</i>
+          </div>
+
+          <!-- 2. 励志科研项目 -->
+          <div class="contact-card reveal" data-delay="1">
+            <div class="contact-icon">🤖</div>
+            <div class="contact-body">
+              <small>2024.01 ~ 2024.04 · 励志科研项目</small>
+              <h3>AI 视觉 + 工业机械臂</h3>
+              <p>加入励志科研项目，完成人工智能视觉对准工业机械臂的软硬件开发，结合视觉算法与机械臂控制实现工业场景下的目标识别与抓取。</p>
+            </div>
+            <i class="contact-arrow">＋</i>
+          </div>
+
+          <!-- 3. 计算机应用能力大赛 -->
+          <div class="contact-card reveal" data-delay="2">
+            <div class="contact-icon">🎖️</div>
+            <div class="contact-body">
+              <small>2024.03 ~ 2024.05 · 市级 · 第一负责人</small>
+              <h3>上海市计算机应用能力大赛 · 三等奖</h3>
+              <p>担任第一负责人参加上海市计算机应用能力大赛，从需求分析、系统设计到答辩全程主导，最终获得上海市三等奖。</p>
+            </div>
+            <i class="contact-arrow">＋</i>
+          </div>
+
+          <!-- 4. 上位机软件 + 软著 -->
+          <div class="contact-card reveal">
+            <div class="contact-icon">🖥️</div>
+            <div class="contact-body">
+              <small>2024.03 ~ 2024.06 · 上位机软件</small>
+              <h3>上位机软件 + 软著 · 浦东新势力二等奖</h3>
+              <p>开发并设计上位机软件，结合 UI 界面适配移动端，基于 OpenCV 与 Django 架构，获得软件著作权；荣获上海市浦东新区第二届新势力大赛二等奖。</p>
+            </div>
+            <i class="contact-arrow">＋</i>
+          </div>
+
+          <!-- 5. 3D 建模 + 3D 打印 -->
+          <div class="contact-card reveal" data-delay="1">
+            <div class="contact-icon">🛠️</div>
+            <div class="contact-body">
+              <small>2024.07 ~ 2024.09 · 3D 建模与生产</small>
+              <h3>SW / UG 建模 + 3D 打印</h3>
+              <p>完成 SolidWorks、UG 等建模软件学习，熟练运用 3D 建模及 3D 打印机完成小型零件与原型的实际生产。</p>
+            </div>
+            <i class="contact-arrow">＋</i>
+          </div>
+
+          <!-- 6. 2023 双创 -->
+          <div class="contact-card reveal" data-delay="2">
+            <div class="contact-icon">💡</div>
+            <div class="contact-body">
+              <small>2023 · 市级立项</small>
+              <h3>双创市级立项 · 实用新型专利</h3>
+              <p>2023 年双创市级立项，获得实用新型专利。从创意到原型到专利申请，全程参与。</p>
+            </div>
+            <i class="contact-arrow">＋</i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="future shell section-pad">
+      <div class="future-head reveal">
+        <div class="section-kicker"><span>02</span> NEXT PAGES</div>
+        <h2>其他页面</h2>
+      </div>
+      <div class="upcoming-grid reveal">
+        <a class="upcoming-card" href="index.html">
+          <span class="upcoming-no">←</span>
+          <div class="upcoming-icon">🏠</div>
+          <h3>返回首页</h3>
+          <p>回到孙瑞祥的个人主页。</p>
+          <i class="upcoming-arrow">↗</i>
+        </a>
+        <a class="upcoming-card" href="about.html">
+          <span class="upcoming-no">→</span>
+          <div class="upcoming-icon">📄</div>
+          <h3>简历详情</h3>
+          <p>查看完整简历信息。</p>
+          <i class="upcoming-arrow">↗</i>
+        </a>
+        <a class="upcoming-card" href="experience.html">
+          <span class="upcoming-no">→</span>
+          <div class="upcoming-icon">💼</div>
+          <h3>实习经历</h3>
+          <p>查看上海博特盈信息科技有限公司的软件测试实习。</p>
+          <i class="upcoming-arrow">↗</i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <div>
+      <strong>孙瑞祥 · 个人主页</strong>
+      <span>SOFTWARE ENGINEER · BUILT 2025</span>
+    </div>
+    <p>© <span id="year"></span> BUILT WITH CODE &amp; CARE.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
